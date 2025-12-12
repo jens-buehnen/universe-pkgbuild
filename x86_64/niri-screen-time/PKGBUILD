@@ -1,0 +1,44 @@
+_pkgname=niri-screen-time
+pkgname="$_pkgname"
+pkgver=0.0.15
+_fullpkgname="$_pkgname-$pkgver"
+pkgrel=1
+pkgdesc='Niri screen time tracker'
+url='https://github.com/probeldev/niri-screen-time'
+arch=('aarch64' 'i686' 'x86_64')
+license=('custom:none')
+depends=('glibc')
+makedepends=('git' 'go')
+provides=("$_pkgname")
+source=("https://github.com/probeldev/niri-screen-time/archive/refs/tags/v$pkgver.tar.gz")
+sha256sums=('SKIP')
+
+prepare() {
+  cd "$_fullpkgname"
+  go mod download
+}
+
+build() {
+  export CGO_CPPFLAGS="${CPPFLAGS}"
+  export CGO_CFLAGS="${CFLAGS}"
+  export CGO_CXXFLAGS="${CXXFLAGS}"
+  export CGO_LDFLAGS="${LDFLAGS}"
+  export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
+  cd "$_fullpkgname"
+  go build
+}
+
+check() {
+  export CGO_CPPFLAGS="${CPPFLAGS}"
+  export CGO_CFLAGS="${CFLAGS}"
+  export CGO_CXXFLAGS="${CXXFLAGS}"
+  export CGO_LDFLAGS="${LDFLAGS}"
+  export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -mod=readonly -modcacherw"
+  cd "$_fullpkgname"
+  go test ./...
+}
+
+package() {
+  cd "$_fullpkgname"
+  install -Dv niri-screen-time -t "$pkgdir/usr/bin/"
+}
