@@ -1,0 +1,6 @@
+#!/bin/env bash
+cd ~/Downloads/
+pwd
+unp freetube*.zip
+yay -U freetube*.pacman --noconfirm
+rm -rf freetube*

@@ -1,0 +1,15 @@
+pkgname=universe-scripts
+pkgver=1
+pkgrel=1
+pkgdesc="Random Scripts i use"
+depends=('doas' 'rate-mirrors' 'yay')
+arch=('any')
+
+package() {
+  mkdir -p "${pkgdir}/usr/bin"
+  install -D -m755 ../doasedit "${pkgdir}/usr/bin"
+  install -D -m755 ../universe-rate-mirrors "${pkgdir}/usr/bin"
+  install -D -m755 ../update "${pkgdir}/usr/bin"
+  install -D -m755 ../update-freetube "${pkgdir}/usr/bin"
+  install -D -m755 ../vidoas "${pkgdir}/usr/bin"
+}
