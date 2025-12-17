@@ -2,7 +2,7 @@
 
 pkgname=chameleos
 pkgver=0.1.2
-pkgrel=1
+pkgrel=2
 pkgdesc='Screen annotation tool for niri and Hyprland'
 arch=('x86_64' 'aarch64')
 url='https://github.com/Treeniks/chameleos'

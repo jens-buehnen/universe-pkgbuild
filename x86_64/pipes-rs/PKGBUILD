@@ -1,6 +1,6 @@
 pkgname=pipes-rs
 pkgver=1.6.4
-pkgrel=1
+pkgrel=2
 pkgdesc="An over-engineered rewrite of pipes.sh in Rust"
 arch=('any')
 url="https://github.com/lhvy/pipes-rs"
