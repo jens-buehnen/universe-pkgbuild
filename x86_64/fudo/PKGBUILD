@@ -1,0 +1,26 @@
+_pkgname='fudo'
+pkgname="${_pkgname}"
+pkgver=1
+pkgrel=1
+pkgdesc='A sudo to doas wrapper'
+arch=('x86_64')
+url='https://github.com/FragmentedCurve/fudo'
+license=('BSD')
+depends=('doas')
+makedepends=('git')
+conflicts=("${pkgname%-git}" 'sudo')
+provides=("${pkgname%-git}" 'sudo')
+source=('git+https://github.com/FragmentedCurve/fudo.git')
+md5sums=('SKIP')
+
+build() {
+  cd "${_pkgname}"
+  make
+}
+
+package() {
+  cd "${_pkgname}"
+  install -D fudo ${pkgdir}/usr/bin/fudo
+  install -D fudo.1 ${pkgdir}/usr/share/man/man1/fudo.1
+  ln -s /usr/bin/fudo ${pkgdir}/usr/bin/sudo
+}
