@@ -1,0 +1,10 @@
+pkgname=deck-link
+pkgver=1
+pkgrel=1
+pkgdesc="Link deck User to ~"
+arch=('any')
+
+package() {
+  mkdir -p "${pkgdir}/home/"
+  ln -s ~ ${pkgdir}/home/deck
+}
