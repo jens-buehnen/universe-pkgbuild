@@ -1,6 +1,7 @@
 pkgname=dot-files
 pkgver=1
-pkgrel=1
+pkgrel=2
+pkgdesc="My Personal Dot-Files"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dot-files.git')
 sha256sums=('SKIP')
