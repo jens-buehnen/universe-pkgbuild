@@ -1,0 +1,15 @@
+#!/bin/env bash
+easy-ln() {
+  ln -sf $1 $2
+}
+
+read -p "Are you sure? this will remove all existing dot files" -n 1 -r
+echo # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  for i in /usr/share/dot-files/*; do
+    o="$(basename $i)"
+    echo "Linking $i to $(echo ~/.config)/$o"
+    rm -rf ~/.config/$(echo $o)
+    easy-ln $i ~/.config
+  done
+fi

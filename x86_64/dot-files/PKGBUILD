@@ -1,0 +1,12 @@
+pkgname=dot-files
+pkgver=1
+pkgrel=1
+arch=('any')
+source=('git+https://github.com/jens-buehnen/dot-files.git')
+sha256sums=('SKIP')
+package() {
+  mkdir -p "${pkgdir}/usr/share/dot-files"
+  mkdir "${pkgdir}/usr/bin"
+  install -D -m755 ../link-dot-files "${pkgdir}/usr/bin"
+  cp -r ../src/dot-files/* "${pkgdir}/usr/share/dot-files"
+}
