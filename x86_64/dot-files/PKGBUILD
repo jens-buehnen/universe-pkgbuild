@@ -1,6 +1,6 @@
 pkgname=dot-files
 pkgver=1.1
-pkgrel=2
+pkgrel=1
 pkgdesc="My Personal Dot-Files"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dot-files.git')
