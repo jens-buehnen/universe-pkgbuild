@@ -4,7 +4,6 @@ easy-ln() {
 }
 
 read -p "Are you sure? this will remove all existing dot files" -n 1 -r
-echo # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   for i in /usr/share/dot-files/*; do
     o="$(basename $i)"
