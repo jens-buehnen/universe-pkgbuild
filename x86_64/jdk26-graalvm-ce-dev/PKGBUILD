@@ -1,0 +1,24 @@
+graal_=26
+java_=26
+pkgname="jdk${java_}-graalvm-ce-dev"
+pkgver=26.0.0_dev_20250923_0204
+pkgver_=26.0.0-dev-20250923_0204
+pkgrel=1
+pkgdesc="Universal virtual machine for running applications written in a variety of languages (JVM-based, LLVM-based, or other), Java ${java_} version"
+arch=('x86_64')
+url='https://www.graalvm.org/'
+license=('custom')
+makedepends=()
+depends=('java-runtime-common' 'java-environment-common')
+provides=("java-runtime=${java_}" "java-environment=${java_}")
+replaces=("native-image-jdk${java_}-bin")
+options=('staticlibs' !debug)
+install="install.install"
+source_x86_64=("https://github.com/graalvm/graalvm-ce-dev-builds/releases/download/${pkgver_}/graalvm-community-java${java_}-linux-amd64-dev.tar.gz")
+sha256sums_x86_64=('SKIP')
+package() {
+  cd "graalvm-community-openjdk-${graal_}+13.1"
+  mkdir -p "$pkgdir/usr/lib/jvm/java-${java_}-graalvm/"
+  cp -a -t "$pkgdir/usr/lib/jvm/java-${java_}-graalvm/" *
+  install -DTm644 LICENSE.txt "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
