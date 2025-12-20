@@ -1,10 +1,11 @@
 pkgname=dot-files
-pkgver=1
+pkgver=1.1
 pkgrel=2
 pkgdesc="My Personal Dot-Files"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dot-files.git')
 sha256sums=('SKIP')
+depends=('fish' 'ghostty' 'niri' 'eza' 'neovim' 'stasis' 'fuzzel' 'fastfetch' 'chameleos' 'fd' 'hyfetch' 'zoxide' 'starship' 'fzf' 'mpv' 'yay' 'doas' 'waybar' 'wlsunseg' 'niri-screen-time' 'steam' 'mate-polkit' 'swaylock' 'wlogout')
 package() {
   mkdir -p "${pkgdir}/usr/share/dot-files"
   mkdir "${pkgdir}/usr/bin"

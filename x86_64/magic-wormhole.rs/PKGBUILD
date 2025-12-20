@@ -1,0 +1,13 @@
+pkgname="magic-wormhole.rs"
+pkgver=0.7.6
+pkgrel=1
+arch=('x86_64')
+pkgdesc="Magic Wormhole but written in Rust."
+makedepends=('unp')
+source=("https://github.com/magic-wormhole/magic-wormhole.rs/releases/download/${pkgver}/magic-wormhole-cli-x86_64-unknown-linux-gnu.tgz")
+sha256sums=('SKIP')
+
+package() {
+  mkdir -p "${pkgdir}/usr/bin"
+  install -D -m755 "${srcdir}/wormhole-rs" "${pkgdir}/usr/bin"
+}
