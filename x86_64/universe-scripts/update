@@ -3,11 +3,8 @@ if command -v yay &>/dev/null; then
   yay
   yay -Scc --noconfirm
 fi
+
 if command -v flatpak &>/dev/null; then
   doas flatpak update
   doas flatpak uninstall --unused
-fi
-if command -v brew &>/dev/null; then
-  brew upgrade
-  brew update
 fi

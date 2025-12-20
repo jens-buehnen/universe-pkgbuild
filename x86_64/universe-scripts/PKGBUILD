@@ -1,5 +1,5 @@
 pkgname=universe-scripts
-pkgver=1.0.2
+pkgver=1.1
 pkgrel=1
 pkgdesc="Random Scripts i use"
 depends=('doas' 'rate-mirrors' 'yay')
