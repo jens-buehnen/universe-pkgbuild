@@ -5,3 +5,4 @@ rm -rf $(pwd)/x86_64/*/src/
 rm -rf $(pwd)/x86_64/*/*.tar.gz
 rm -rf $(pwd)/x86_64/*/*.tgz
 rm -rf $(pwd)/x86_64/dot-files/dot-files
+rm -rf $(pwd)/x86_64/freetube-nightly/*.xz
