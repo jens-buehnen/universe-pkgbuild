@@ -1,0 +1,40 @@
+#!/bin/env bash
+usage() {
+  echo "usage: dot-files"
+  echo "  --help -h     Print usage"
+  echo "  --install -i  Installs Dot-files and Deletes old ones"
+  echo "  --update -u   Updates Dot-files"
+}
+
+copy-dot-files() {
+  for i in /usr/share/dot-files/*; do
+    u="$(basename $i)"
+    z="$(echo ~/.config/$u)"
+    for o in $i/*; do
+      cp $o $z -r
+      echo $o
+    done
+  done
+  exit 0
+}
+
+install() {
+  for i in /usr/share/dot-files/*; do
+    u="$(basename $i)"
+    z="$(echo ~/.config/$u)"
+    rm -rf $z
+    mkdir $z
+    copy-dot-files
+  done
+}
+
+while [[ "$1" ]]; do
+  case $1 in
+  "--help") usage ;;
+  "--install") install ;;
+  "--update") copy-dot-files ;;
+  "-h") usage ;;
+  "-i") install ;;
+  "-u") copy-dot-files ;;
+  esac
+done
