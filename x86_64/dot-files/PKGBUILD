@@ -5,7 +5,7 @@ pkgdesc="My Personal Dot-Files"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dot-files.git')
 sha256sums=('SKIP')
-depends=('bemoji' 'bibata-cursor-theme' 'fish' 'ghostty' 'niri' 'eza' 'neovim' 'stasis' 'fuzzel' 'fastfetch' 'chameleos' 'fd' 'hyfetch' 'zoxide' 'starship' 'fzf' 'mpv' 'yay' 'doas' 'waybar' 'wlsunset' 'brightnessctl' 'cliphist' 'wl-clipboard' 'yazi' 'neovide' 'niri-screen-time' 'steam' 'mate-polkit' 'swaylock' 'wlogout')
+depends=('bemoji' 'bibata-cursor-theme' 'fish' 'ghostty' 'niri' 'eza' 'neovim' 'stasis' 'fuzzel' 'fastfetch' 'chameleos' 'fd' 'hyfetch' 'zoxide' 'starship' 'fzf' 'mpv' 'yay' 'doas' 'waybar' 'brightnessctl' 'cliphist' 'wl-clipboard' 'yazi' 'neovide' 'niri-screen-time' 'steam' 'mate-polkit' 'swaylock' 'wlogout')
 package() {
   mkdir -p "${pkgdir}/usr/share/dot-files"
   mkdir "${pkgdir}/usr/bin"
