@@ -1,9 +1,12 @@
 #!/bin/env bash
 usage() {
   echo "usage: dot-files"
-  echo "  --help -h     Print usage"
-  echo "  --install -i  Installs Dot-files and Deletes old ones"
-  echo "  --update -u   Updates Dot-files"
+  echo "  -h, --help"
+  echo "          Shows This Text"
+  echo "  -i, --install"
+  echo "          Install the dot files"
+  echo "  -u, --update"
+  echo "          Updates the dot files"
 }
 
 copy-dot-files() {
@@ -12,10 +15,8 @@ copy-dot-files() {
     z="$(echo ~/.config/$u)"
     for o in $i/*; do
       cp $o $z -r
-      echo $o
     done
   done
-  exit 0
 }
 
 install() {
@@ -28,13 +29,16 @@ install() {
   done
 }
 
-while [[ "$1" ]]; do
-  case $1 in
-  "--help") usage ;;
-  "--install") install ;;
-  "--update") copy-dot-files ;;
-  "-h") usage ;;
-  "-i") install ;;
-  "-u") copy-dot-files ;;
-  esac
-done
+if [[ $1 == "--help " || $1 == "-h" ]]; then
+  usage
+  exit 0
+elif [[ $1 == "--install" || $1 == "-i" ]]; then
+  install
+  exit 0
+elif [[ $1 == "--update" || $1 == "-u" ]]; then
+  copy-dot-files
+  exit 0
+else
+  usage
+  exit 1
+fi
