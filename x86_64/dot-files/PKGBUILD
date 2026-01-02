@@ -1,5 +1,5 @@
 pkgname=dot-files
-pkgver=1.2.3
+pkgver=1.2.5
 pkgrel=1
 pkgdesc="My Personal Dot-Files"
 arch=('any')
