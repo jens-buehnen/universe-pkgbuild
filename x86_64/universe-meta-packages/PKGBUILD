@@ -1,0 +1,18 @@
+pkgname=universe-meta-packages
+pkgver=1
+pkgrel=1
+pkgdesc='Meta Packages'
+arch=('any')
+depends=(
+
+  # Terminal Packages
+  'ripgrep' 'fd' 'starship' 'wiremix' 'fzf' 'doas' 'eza' 'neovim' 'yazi' 'fish' 'zoxide' 'hyfetch' 'fastfetch' 'ghostty' 'doas' 'yay'
+
+  # Graphical Packages
+  'niri' 'cliphist' 'brightnessctl' 'waybar' 'mpv' 'bemoji' 'sound-theme-freedesktop' 'stasis' 'fuzzel' 'wlogout' 'swaylock' 'mate-polkit' 'niri-screen-time'
+  'wl-clipboard' 'chameleos' 'bibata-cursor-theme'
+)
+
+optdepends=(
+  'steam'
+)
