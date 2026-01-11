@@ -1,16 +1,16 @@
 pkgname=universe-meta-packages
 pkgver=1
-pkgrel=2
+pkgrel=3
 pkgdesc='Meta Packages'
 arch=('any')
 depends=(
 
   # Terminal Packages
-  'ripgrep' 'fd' 'starship' 'btop' 'wiremix' 'fzf' 'doas' 'eza' 'neovim' 'yazi' 'fish' 'zoxide' 'hyfetch' 'fastfetch' 'ghostty' 'doas' 'yay'
+  'ripgrep' 'fd' 'starship' 'btop' 'wiremix' 'fzf' 'doas' 'eza' 'neovim' 'bluetui' 'fish' 'zoxide' 'hyfetch' 'fastfetch' 'ghostty' 'doas' 'yay'
 
   # Graphical Packages
   'niri' 'cliphist' 'brightnessctl' 'waybar' 'mpv' 'bemoji' 'sound-theme-freedesktop' 'fuzzel' 'wlogout' 'swaylock' 'mate-polkit' 'niri-screen-time'
-  'wl-clipboard' 'chameleos' 'bibata-cursor-theme'
+  'wl-clipboard' 'chameleos' 'bibata-cursor-theme' 'ttf-twemoji' 'ttf-jetbrains-mono-nerd'
 )
 
 optdepends=(
