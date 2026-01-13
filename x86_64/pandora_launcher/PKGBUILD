@@ -1,0 +1,31 @@
+pkgname=pandora_launcher
+pkgver=2.5.0
+pkgrel=1
+pkgdesc="A modern Minecraft launcher that balances ease-of-use with powerful instance management features."
+arch=('x86_64')
+url="http://pandora.moulberry.com/"
+source=("https://github.com/Moulberry/PandoraLauncher/releases/download/v${pkgver}/PandoraLauncher-Linux-${pkgver}-x86_64" "${pkgname}.desktop" "https://github.com/Moulberry/PandoraLauncher/blob/master/package/icon_256x256.png")
+license=('MIT')
+depends=(
+  "gnome-keyring"
+  'libxkbcommon-x11'
+  'vulkan-tools'
+  'wayland'
+  'libxkbcommon'
+  'libxcb'
+  'vulkan-icd-loader'
+  'vulkan-driver'
+  'openssl'
+)
+optdepends=(
+  'flite: minecraft narrator support'
+)
+sha256sums=('SKIP' 'SKIP' 'SKIP')
+
+package() {
+  install -Dm755 "$srcdir/PandoraLauncher-Linux-${pkgver}-x86_64" "$pkgdir/usr/bin/${pkgname}"
+  mkdir $pkgdir/usr/share/applications -p
+  mkdir $pkgdir/usr/share/pixmaps -p
+  install $pkgname.desktop "$pkgdir/usr/share/applications/$pkgname.desktop"
+  install "$srcdir/icon_256x256.png" "$pkgdir/usr/share/pixmaps/$pkgname.png"
+}

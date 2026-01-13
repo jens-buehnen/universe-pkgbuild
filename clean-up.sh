@@ -6,3 +6,5 @@ rm -rf $(pwd)/x86_64/*/*.tar.gz
 rm -rf $(pwd)/x86_64/*/*.tgz
 rm -rf $(pwd)/x86_64/dot-files/dot-files
 rm -rf $(pwd)/x86_64/freetube-nightly/*.xz
+rm -rf $(pwd)/x86_64/pandora_launcher/*andora*
+rm -rf $(pwd)/x86_64/pandora_launcher/*.png
