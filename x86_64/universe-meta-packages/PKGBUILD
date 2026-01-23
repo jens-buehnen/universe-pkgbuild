@@ -6,7 +6,7 @@ arch=('any')
 depends=(
 
   # Terminal Packages
-  'ripgrep' 'fd' 'starship' 'btop' 'wiremix' 'fzf' 'doas' 'eza' 'neovim' 'bluetui' 'fish' 'zoxide' 'hyfetch' 'fastfetch' 'ghostty' 'doas' 'yay'
+  'ripgrep' 'fd' 'starship' 'btop' 'wiremix' 'fzf' 'doas' 'eza' 'neovim' 'bluetui' 'fish' 'topgrade' 'zoxide' 'hyfetch' 'fastfetch' 'ghostty' 'doas' 'yay'
 
   # Graphical Packages
   'niri' 'cliphist' 'brightnessctl' 'waybar' 'mpv' 'bemoji' 'sound-theme-freedesktop' 'fuzzel' 'wlogout' 'swaylock' 'mate-polkit' 'niri-screen-time'
