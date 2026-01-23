@@ -29,6 +29,10 @@ install=$pkgname.install
 source=("https://github.com/jens-buehnen/${pkgname}/releases/latest/download/${_pkgname}.pacman.tar.xz")
 sha256sums=('SKIP')
 
+pkgver() {
+  curl -s https://api.github.com/repos/jens-buehnen/freetube-nightly/releases/latest | jq -r '.tag_name'
+}
+
 package() {
   install -d "$pkgdir/opt/FreeTube"
   cp -r "${srcdir}/opt/" "${pkgdir}/"
