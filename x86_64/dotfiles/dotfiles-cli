@@ -25,7 +25,7 @@ install() {
     z="$(echo ~/.config/$u)"
     rm -rf $z
     mkdir $z
-    copydot-files
+    copy-dotfiles
   done
 }
 
@@ -36,7 +36,7 @@ elif [[ $1 == "--install" || $1 == "-i" ]]; then
   install
   exit 0
 elif [[ $1 == "--update" || $1 == "-u" ]]; then
-  copydot-files
+  copy-dotfiles
   exit 0
 else
   usage
