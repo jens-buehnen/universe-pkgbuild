@@ -1,4 +1,5 @@
-pkgname=universe-meta-packages
+pkgbase=universe-meta
+pkgname=("${pkgbase}"{,-niri,-shell})
 pkgver=1
 pkgrel=4
 pkgdesc='Meta Packages'
@@ -13,8 +14,37 @@ depends=(
   'wl-clipboard' 'chameleos' 'bibata-cursor-theme' 'ttf-twemoji' 'ttf-jetbrains-mono-nerd'
 )
 
-optdepends=(
-  'steam'
-  'vesktop'
-  'stasis'
-)
+package_universe-meta-niri() {
+  pkgdesc='meta packages for my niri configuration'
+  depends=(
+    'niri' 'cliphist' 'brightnessctl' 'waybar' 'mpv' 'bemoji' 'sound-theme-freedesktop' 'fuzzel' 'wlogout' 'swaylock' 'mate-polkit' 'niri-screen-time'
+    'wl-clipboard' 'chameleos' 'bibata-cursor-theme' 'ttf-twemoji' 'ttf-jetbrains-mono-nerd' 'papirus-icon-theme' 'ghostty' 'btop' 'bluetui' 'wiremix'
+  )
+  optdepends=(
+    'steam: steam autostarting'
+    'vesktop: vesktop autostarting'
+    'stasis: idle manager'
+  )
+  provides=('niri-dots')
+}
+
+package_universe-meta-shell() {
+  pkgdesc='meta packages for my fish configuration'
+  depends=(
+    'ripgrep' 'fd' 'starship' 'fzf' 'doas' 'eza' 'neovim' 'fish' 'zoxide' 'hyfetch' 'fastfetch'
+  )
+  optdepends=(
+    'bluetui'
+    'wiremix'
+    'btop'
+    'topgrade'
+    'yay'
+  )
+}
+
+package_universe-meta() {
+  pkgdesc='all the meta packages'
+  depends=(
+    'universe-meta-shell' 'universe-meta-niri'
+  )
+}
