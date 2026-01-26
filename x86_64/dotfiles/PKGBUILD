@@ -1,0 +1,88 @@
+pkgbase=dotfiles
+pkgname=({fastfetch-,fish-,fuzzel-,ghostty-,mpv-,niri-,nvim-,swaylock-,waybar-,wlogout-,yay-,}"${pkgbase}" "${pkgbase}-cli")
+pkgver=1.2.17
+pkgrel=3
+pkgdesc="my personal dotfiles"
+arch=('any')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+depends=('universe-meta')
+
+package_fastfetch-dotfiles() {
+  pkgdesc='my fastfetch configs'
+  mkdir -p "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/fastfetch "${pkgdir}/usr/share/dotfiles"
+}
+
+package_fish-dotfiles() {
+  pkgdesc='my fish configs'
+  mkdir -p "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/fish "${pkgdir}/usr/share/dotfiles"
+}
+
+package_fuzzel-dotfiles() {
+  pkgdesc='my fuzzel configs'
+  mkdir -p "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/fuzzel "${pkgdir}/usr/share/dotfiles"
+}
+
+package_ghostty-dotfiles() {
+  pkgdesc='my ghostty configs'
+  mkdir -p "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/ghostty "${pkgdir}/usr/share/dotfiles"
+}
+
+package_mpv-dotfiles() {
+  pkgdesc='my mpv configs'
+  mkdir -p "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/mpv "${pkgdir}/usr/share/dotfiles"
+}
+
+package_niri-dotfiles() {
+  pkgdesc='my niri configs'
+  mkdir -p "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/niri "${pkgdir}/usr/share/dotfiles"
+}
+
+package_nvim-dotfiles() {
+  pkgdesc='my nvim configs'
+  mkdir -p "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/nvim "${pkgdir}/usr/share/dotfiles"
+}
+
+package_swaylock-dotfiles() {
+  pkgdesc='my swaylock configs'
+  mkdir -p "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/swaylock "${pkgdir}/usr/share/dotfiles"
+}
+
+package_waybar-dotfiles() {
+  pkgdesc='my waybar configs'
+  mkdir -p "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/waybar "${pkgdir}/usr/share/dotfiles"
+}
+
+package_wlogout-dotfiles() {
+  pkgdesc='my wlogout configs'
+  mkdir -p "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/wlogout "${pkgdir}/usr/share/dotfiles"
+}
+
+package_yay-dotfiles() {
+  pkgdesc='my yay configs'
+  mkdir -p "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/yay "${pkgdir}/usr/share/dotfiles"
+}
+
+package_dotfiles() {
+  pkgdesc='all of my dotfiles'
+  depends=(
+    'fastfetch-dotfiles' 'fish-dotfiles' 'fuzzel-dotfiles' 'ghostty-dotfiles' 'mpv-dotfiles' 'niri-dotfiles' 'nvim-dotfiles' 'swaylock-dotfiles' 'waybar-dotfiles' 'wlogout-dotfiles' 'yay-dotfiles' 'dotfiles-cli'
+  )
+}
+
+package_dotfiles-cli() {
+  pkgdesc='a cli to install all dotfiles'
+  mkdir -p "$pkgdir/usr/bin"
+  install -D -m755 ../dotfiles-cli "${pkgdir}/usr/bin"
+}

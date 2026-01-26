@@ -1,6 +1,6 @@
 #!/bin/env bash
 usage() {
-  echo "usage: dot-files"
+  echo "usage: dotfiles-cli"
   echo "  -h, --help"
   echo "          Shows This Text"
   echo "  -i, --install"
@@ -9,8 +9,8 @@ usage() {
   echo "          Updates the dot files"
 }
 
-copy-dot-files() {
-  for i in /usr/share/dot-files/*; do
+copy-dotfiles() {
+  for i in /usr/share/dotfiles/*; do
     u="$(basename $i)"
     z="$(echo ~/.config/$u)"
     for o in $i/*; do
@@ -20,12 +20,12 @@ copy-dot-files() {
 }
 
 install() {
-  for i in /usr/share/dot-files/*; do
+  for i in /usr/share/dotfiles/*; do
     u="$(basename $i)"
     z="$(echo ~/.config/$u)"
     rm -rf $z
     mkdir $z
-    copy-dot-files
+    copydot-files
   done
 }
 
@@ -36,7 +36,7 @@ elif [[ $1 == "--install" || $1 == "-i" ]]; then
   install
   exit 0
 elif [[ $1 == "--update" || $1 == "-u" ]]; then
-  copy-dot-files
+  copydot-files
   exit 0
 else
   usage
