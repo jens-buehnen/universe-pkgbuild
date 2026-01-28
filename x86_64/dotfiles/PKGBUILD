@@ -44,8 +44,8 @@ package_mpv-dotfiles() {
 }
 
 package_niri-dotfiles() {
-  depends=('niri' 'wl-clipboard' 'chameleos' 'niri-screen-time' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist')
-  optdepends=('vesktop' 'stasis' 'steam' 'ttf-twemoji' 'papirus-icon-theme')
+  depends=('niri' 'wl-clipboard' 'ttf-twemoji' 'papirus-icon-theme' 'catppuccin-gtk-theme-mocha-pink' 'chameleos' 'niri-screen-time' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist')
+  optdepends=('vesktop' 'stasis' 'steam')
   pkgdesc='my niri configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
   cp -r ${srcdir}/dotfiles/niri "${pkgdir}/usr/share/dotfiles"

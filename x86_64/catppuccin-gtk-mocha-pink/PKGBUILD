@@ -1,7 +1,7 @@
-pkgname=catppuccin-gtk-theme-mocha
+pkgname=catppuccin-gtk-theme-mocha-pink
 pkgver=1.0.6
 pkgrel=1
-pkgdesc='Soothing pastel theme for GTK - Mocha'
+pkgdesc='Soothing pastel theme for GTK - Mocha Pink'
 arch=('any')
 license=('GPL3')
 url='https://github.com/VanillaDaFur/catppuccin-gtk'
