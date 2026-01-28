@@ -1,6 +1,6 @@
 pkgname=remove-adwaita
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 arch=(any)
-provides=('adwaita-fonts' 'adwaita-icon-theme')
-conflicts=('adwaita-cursors' 'adwaita-fonts' 'adwaita-icon-theme' 'adwaita-icon-theme-legacy')
+provides=('adwaita-icon-theme')
+conflicts=('adwaita-cursors' 'adwaita-icon-theme' 'adwaita-icon-theme-legacy')
