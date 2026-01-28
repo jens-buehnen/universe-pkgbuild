@@ -1,7 +1,7 @@
 pkgbase=dotfiles
 pkgname=({fastfetch-,fish-,fuzzel-,ghostty-,mpv-,niri-,nvim-,swaylock-,waybar-,wlogout-,yay-,}"${pkgbase}" "${pkgbase}-cli")
 pkgver=1.2.19
-pkgrel=1
+pkgrel=2
 pkgdesc="my personal dotfiles"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dotfiles.git')
@@ -66,7 +66,7 @@ package_swaylock-dotfiles() {
 }
 
 package_waybar-dotfiles() {
-  depends=('waybar' 'bluetui' 'wiremix' 'botp' 'niri')
+  depends=('waybar' 'bluetui' 'wiremix' 'btop' 'niri')
   pkgdesc='my waybar configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
   cp -r ${srcdir}/dotfiles/waybar "${pkgdir}/usr/share/dotfiles"
