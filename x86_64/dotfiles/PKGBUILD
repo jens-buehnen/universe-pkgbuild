@@ -1,7 +1,7 @@
 pkgbase=dotfiles
 pkgname=({fastfetch-,fish-,fuzzel-,ghostty-,mpv-,niri-,nvim-,swaylock-,waybar-,wlogout-,yay-,}"${pkgbase}" "${pkgbase}-cli")
-pkgver=1.2.18
-pkgrel=2
+pkgver=1.2.19
+pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dotfiles.git')
@@ -44,7 +44,7 @@ package_mpv-dotfiles() {
 }
 
 package_niri-dotfiles() {
-  depends=('niri' 'wl-clipboard' 'ttf-twemoji' 'papirus-icon-theme' 'catppuccin-gtk-theme-mocha-pink' 'chameleos' 'niri-screen-time' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist')
+  depends=('niri' 'wl-clipboard' 'ttf-twemoji' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'chameleos' 'niri-screen-time' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist')
   optdepends=('vesktop' 'stasis' 'steam')
   pkgdesc='my niri configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
