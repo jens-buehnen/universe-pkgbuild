@@ -15,7 +15,7 @@ package_fastfetch-dotfiles() {
 }
 
 package_fish-dotfiles() {
-  depends=('zoxide' 'hyfetch' 'neovim' 'yay' 'starship' 'fzf' 'eza' 'ripgrep' 'fd' 'doas')
+  depends=('fish' 'zoxide' 'hyfetch' 'neovim' 'yay' 'starship' 'fzf' 'eza' 'ripgrep' 'fd' 'doas')
   optdepends=('topgrade' 'git' 'ladybird' 'mpv' 'niri-screen-time' 'tar')
   pkgdesc='my fish configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
@@ -44,8 +44,8 @@ package_mpv-dotfiles() {
 }
 
 package_niri-dotfiles() {
-  depends=('niri' 'wl-clipboard' 'chameleos' 'niri-screen-time' 'waybar' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist')
-  optdepends=('vesktop' 'stasis' 'steam')
+  depends=('niri' 'wl-clipboard' 'chameleos' 'niri-screen-time' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist')
+  optdepends=('vesktop' 'stasis' 'steam' 'ttf-twemoji' 'papirus-icon-theme')
   pkgdesc='my niri configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
   cp -r ${srcdir}/dotfiles/niri "${pkgdir}/usr/share/dotfiles"
@@ -66,7 +66,7 @@ package_swaylock-dotfiles() {
 }
 
 package_waybar-dotfiles() {
-  depends=('waybar' 'niri')
+  depends=('waybar' 'bluetui' 'wiremix' 'botp' 'niri')
   pkgdesc='my waybar configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
   cp -r ${srcdir}/dotfiles/waybar "${pkgdir}/usr/share/dotfiles"
