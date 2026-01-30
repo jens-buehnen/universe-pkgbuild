@@ -1,7 +1,7 @@
 pkgbase=dotfiles
-pkgname=({fastfetch-,fish-,fuzzel-,ghostty-,mpv-,niri-,nvim-,swaylock-,waybar-,wlogout-,yay-,}"${pkgbase}" "${pkgbase}-cli")
-pkgver=1.2.20
-pkgrel=2
+pkgname=({fastfetch-,fish-,fuzzel-,ghostty-,mpv-,mango-,niri-,nvim-,swaylock-,waybar-,wlogout-,yay-,}"${pkgbase}" "${pkgbase}-cli")
+pkgver=1.2.21
+pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dotfiles.git')
@@ -51,6 +51,14 @@ package_niri-dotfiles() {
   cp -r ${srcdir}/dotfiles/niri "${pkgdir}/usr/share/dotfiles"
 }
 
+package_mango-dotfiles() {
+  depends=('mangowc' 'wl-clipboard' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist')
+  optdepends=('vesktop' 'stasis' 'steam')
+  pkgdesc='my mango configs'
+  mkdir -p "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/mango "${pkgdir}/usr/share/dotfiles"
+}
+
 package_nvim-dotfiles() {
   depends=('neovim' 'git' 'curl' 'gcc')
   pkgdesc='my nvim configs'
@@ -89,7 +97,7 @@ package_yay-dotfiles() {
 package_dotfiles() {
   pkgdesc='all of my dotfiles'
   depends=(
-    'fastfetch-dotfiles' 'fish-dotfiles' 'fuzzel-dotfiles' 'ghostty-dotfiles' 'mpv-dotfiles' 'niri-dotfiles' 'nvim-dotfiles' 'swaylock-dotfiles' 'waybar-dotfiles' 'wlogout-dotfiles' 'yay-dotfiles' 'dotfiles-cli'
+    'fastfetch-dotfiles' 'fish-dotfiles' 'fuzzel-dotfiles' 'ghostty-dotfiles' 'mpv-dotfiles' 'mango-dotfiles' 'nvim-dotfiles' 'swaylock-dotfiles' 'waybar-dotfiles' 'wlogout-dotfiles' 'yay-dotfiles' 'dotfiles-cli'
   )
 }
 
