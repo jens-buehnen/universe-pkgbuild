@@ -1,7 +1,7 @@
 pkgbase=dotfiles
 pkgname=({fastfetch-,fish-,fuzzel-,ghostty-,mpv-,mango-,niri-,nvim-,swaylock-,waybar-,wlogout-,yay-,}"${pkgbase}" "${pkgbase}-cli")
 pkgver=1.2.21
-pkgrel=3
+pkgrel=4
 pkgdesc="my personal dotfiles"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dotfiles.git')
@@ -44,15 +44,15 @@ package_mpv-dotfiles() {
 }
 
 package_niri-dotfiles() {
-  depends=('niri' 'wl-clipboard' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'chameleos' 'niri-screen-time' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist')
-  optdepends=('vesktop' 'stasis' 'steam')
+  depends=('niri' 'wl-clipboard' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'xdg-desktop-portal-gtk' 'catppuccin-gtk-theme-mocha-pink' 'chameleos' 'niri-screen-time' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist')
+  optdepends=('vesktop' 'stasis' 'steam' 'xdg-desktop-portal-gnome')
   pkgdesc='my niri configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
   cp -r ${srcdir}/dotfiles/niri "${pkgdir}/usr/share/dotfiles"
 }
 
 package_mango-dotfiles() {
-  depends=('mangowc' 'wl-clipboard' 'xdg-desktop-portal-wlr' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist')
+  depends=('mangowc' 'wl-clipboard' 'xdg-desktop-portal-wlr' 'xdg-desktop-portal-gtk' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist')
   optdepends=('vesktop' 'stasis' 'steam')
   pkgdesc='my mango configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
