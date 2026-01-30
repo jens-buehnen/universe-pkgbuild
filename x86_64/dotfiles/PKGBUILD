@@ -1,6 +1,6 @@
 pkgbase=dotfiles
 pkgname=({fastfetch-,fish-,fuzzel-,ghostty-,mpv-,mango-,niri-,nvim-,swaylock-,waybar-,wlogout-,yay-,}"${pkgbase}" "${pkgbase}-cli")
-pkgver=1.2.23
+pkgver=1.2.24
 pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
@@ -60,7 +60,7 @@ package_mango-dotfiles() {
 }
 
 package_nvim-dotfiles() {
-  depends=('neovim' 'git' 'curl' 'gcc')
+  depends=('neovim-nightly-bin' 'git' 'curl' 'gcc' 'tree-sitter-cli')
   pkgdesc='my nvim configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
   cp -r ${srcdir}/dotfiles/nvim "${pkgdir}/usr/share/dotfiles"
