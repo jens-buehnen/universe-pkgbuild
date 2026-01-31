@@ -1,6 +1,6 @@
 pkgbase=dotfiles
 pkgname=({fastfetch-,fish-,fuzzel-,ghostty-,mpv-,mango-,niri-,nvim-,swaylock-,waybar-,wlogout-,yay-,}"${pkgbase}" "${pkgbase}-cli")
-pkgver=1.2.25
+pkgver=1.2.26
 pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
