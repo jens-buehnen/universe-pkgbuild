@@ -1,10 +1,10 @@
 pkgname=pandora
-pkgver=2.5.0
-pkgrel=2
+pkgver=2.6.2
+pkgrel=1
 pkgdesc="A modern Minecraft launcher that balances ease-of-use with powerful instance management features."
 arch=('x86_64')
 url="http://pandora.moulberry.com/"
-source=("https://github.com/Moulberry/PandoraLauncher/releases/download/v${pkgver}/PandoraLauncher-Linux-${pkgver}-x86_64" "${pkgname}.desktop")
+source=("https://github.com/Moulberry/PandoraLauncher/releases/download/v${pkgver}/PandoraLauncher-Linux-${pkgver}-x86_64-Portable" "${pkgname}.desktop" "https://raw.githubusercontent.com/Moulberry/PandoraLauncher/refs/heads/master/package/windows_icons/icon_256x256.png")
 license=('MIT')
 depends=(
   "gnome-keyring"
@@ -20,12 +20,12 @@ depends=(
 optdepends=(
   'flite: minecraft narrator support'
 )
-sha256sums=('SKIP' 'SKIP')
+sha256sums=('SKIP' 'SKIP' 'SKIP')
 
 package() {
-  install -Dm755 "$srcdir/PandoraLauncher-Linux-${pkgver}-x86_64" "$pkgdir/usr/bin/${pkgname}"
+  install -Dm755 "$srcdir/PandoraLauncher-Linux-${pkgver}-x86_64-Portable" "$pkgdir/usr/bin/${pkgname}"
   mkdir $pkgdir/usr/share/applications -p
   mkdir $pkgdir/usr/share/pixmaps -p
   install $pkgname.desktop "$pkgdir/usr/share/applications/$pkgname.desktop"
-  install "../icon_256x256.png" "$pkgdir/usr/share/pixmaps/$pkgname.png"
+  install "$srcdir/icon_256x256.png" "$pkgdir/usr/share/pixmaps/$pkgname.png"
 }
