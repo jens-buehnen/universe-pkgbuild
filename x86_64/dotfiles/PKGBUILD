@@ -1,11 +1,16 @@
 pkgbase=dotfiles
 pkgname=({fastfetch-,fish-,fuzzel-,ghostty-,mpv-,mango-,niri-,nvim-,swaylock-,waybar-,wlogout-,yay-,}"${pkgbase}" "${pkgbase}-cli")
-pkgver=1.2.30
+pkgver=r39.3820846
 pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dotfiles.git')
 sha256sums=('SKIP')
+
+pkgver() {
+  cd $pkgbase
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+}
 
 package_fastfetch-dotfiles() {
   depends=('fastfetch')
