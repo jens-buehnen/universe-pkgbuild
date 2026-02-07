@@ -1,6 +1,6 @@
 pkgname=("fastfetch-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "ghostty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "swaylock-dotfiles" "waybar-dotfiles" "wlogout-dotfiles" "yay-dotfiles" "dotfiles-cli")
-pkgver=r39.3820846
-pkgrel=5
+pkgver=r40.27d902e
+pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dotfiles.git')
@@ -65,7 +65,7 @@ package_mango-dotfiles() {
 }
 
 package_nvim-dotfiles() {
-  depends=('neovim' 'git' 'curl' 'gcc' 'tree-sitter-cli')
+  depends=('neovim' 'git' 'curl')
   pkgdesc='my nvim configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
   cp -r ${srcdir}/dotfiles/nvim "${pkgdir}/usr/share/dotfiles"
