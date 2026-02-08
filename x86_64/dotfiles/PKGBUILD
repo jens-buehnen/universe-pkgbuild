@@ -1,5 +1,5 @@
-pkgname=("fastfetch-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "ghostty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "swaylock-dotfiles" "waybar-dotfiles" "wlogout-dotfiles" "yay-dotfiles" "dotfiles-cli")
-pkgver=r45.1df0e46
+pkgname=("fastfetch-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "alacritty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "swaylock-dotfiles" "waybar-dotfiles" "wlogout-dotfiles" "yay-dotfiles" "dotfiles-cli")
+pkgver=r48.811a8e9
 pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
@@ -32,6 +32,13 @@ package_fuzzel-dotfiles() {
   pkgdesc='my fuzzel configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
   cp -r ${srcdir}/dotfiles/fuzzel "${pkgdir}/usr/share/dotfiles"
+}
+
+package_alacritty-dotfiles() {
+  depends=('alacritty' 'ttf-jetbrains-mono-nerd')
+  pkgdesc='my alacritty configs'
+  mkdir -p "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/alacritty "${pkgdir}/usr/share/dotfiles"
 }
 
 package_ghostty-dotfiles() {
