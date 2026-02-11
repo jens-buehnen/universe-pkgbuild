@@ -14,6 +14,7 @@ copy-dotfiles() {
     u="$(basename $i)"
     z="$(echo ~/.config/$u)"
     for o in $i/*; do
+      echo "Copying $o to $z"
       cp $o $z -r
     done
   done
@@ -25,8 +26,8 @@ install() {
     z="$(echo ~/.config/$u)"
     rm -rf $z
     mkdir $z
-    copy-dotfiles
   done
+  copy-dotfiles
 }
 
 if [[ $1 == "--help " || $1 == "-h" ]]; then

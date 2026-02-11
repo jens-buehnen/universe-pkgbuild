@@ -1,6 +1,6 @@
 pkgname=("fastfetch-dotfiles" "jolt-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "topgrade-dotfiles" "alacritty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "swaylock-dotfiles" "waybar-dotfiles" "wlogout-dotfiles" "yay-dotfiles" "dotfiles-cli")
 pkgver=r56.cf03362
-pkgrel=1
+pkgrel=2
 pkgdesc="my personal dotfiles"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dotfiles.git' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/hibernate.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/lock.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/logout.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/reboot.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/shutdown.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/suspend.svg')
