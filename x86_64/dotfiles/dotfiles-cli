@@ -24,6 +24,7 @@ install() {
   for i in /usr/share/dotfiles/*; do
     u="$(basename $i)"
     z="$(echo ~/.config/$u)"
+    echo "Removing $z"
     rm -rf $z
     mkdir $z
   done
