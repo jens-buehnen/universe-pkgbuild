@@ -1,6 +1,6 @@
-pkgname=("fastfetch-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "topgrade-dotfiles" "alacritty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "swaylock-dotfiles" "waybar-dotfiles" "wlogout-dotfiles" "yay-dotfiles" "dotfiles-cli")
-pkgver=r53.8f582f4
-pkgrel=2
+pkgname=("fastfetch-dotfiles" "jolt-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "topgrade-dotfiles" "alacritty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "swaylock-dotfiles" "waybar-dotfiles" "wlogout-dotfiles" "yay-dotfiles" "dotfiles-cli")
+pkgver=r55.590f887
+pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dotfiles.git' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/hibernate.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/lock.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/logout.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/reboot.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/shutdown.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/suspend.svg')
@@ -93,11 +93,18 @@ package_swaylock-dotfiles() {
 }
 
 package_waybar-dotfiles() {
-  depends=('waybar' 'bluetui' 'wiremix' 'btop' 'alacritty')
+  depends=('waybar' 'bluetui' 'wiremix' 'btop' 'alacritty' 'jolt')
   optdepends=('niri' 'mangowc')
   pkgdesc='my waybar configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
   cp -r ${srcdir}/dotfiles/waybar "${pkgdir}/usr/share/dotfiles"
+}
+
+package_jolt-dotfiles() {
+  depends=('jolt')
+  pkgdesc='my jolt configs'
+  mkdir -p "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/jolt "${pkgdir}/usr/share/dotfiles"
 }
 
 package_wlogout-dotfiles() {
