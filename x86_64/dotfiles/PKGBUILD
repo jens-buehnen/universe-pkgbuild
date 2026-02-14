@@ -1,5 +1,5 @@
 pkgname=("fastfetch-dotfiles" "jolt-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "topgrade-dotfiles" "alacritty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "swaylock-dotfiles" "waybar-dotfiles" "wlr-which-key-dotfiles" "yay-dotfiles" "dotfiles-cli")
-pkgver=r63.50078b9
+pkgver=r64.59add34
 pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
