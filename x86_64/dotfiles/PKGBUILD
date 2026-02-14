@@ -1,10 +1,10 @@
-pkgname=("fastfetch-dotfiles" "jolt-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "topgrade-dotfiles" "alacritty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "swaylock-dotfiles" "waybar-dotfiles" "wlogout-dotfiles" "yay-dotfiles" "dotfiles-cli")
-pkgver=r58.52e1472
+pkgname=("fastfetch-dotfiles" "jolt-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "topgrade-dotfiles" "alacritty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "swaylock-dotfiles" "waybar-dotfiles" "wlr-which-key-dotfiles" "yay-dotfiles" "dotfiles-cli")
+pkgver=r62.2dfe0ef
 pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
-source=('git+https://github.com/jens-buehnen/dotfiles.git' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/hibernate.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/lock.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/logout.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/reboot.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/shutdown.svg' 'https://github.com/catppuccin/wlogout/raw/refs/heads/main/icons/wlogout/mocha/pink/suspend.svg')
-sha256sums=('SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
 groups=(dotfiles)
 
 pkgver() {
@@ -71,7 +71,7 @@ package_niri-dotfiles() {
 }
 
 package_mango-dotfiles() {
-  depends=('mangowc' 'wl-clipboard' 'xdg-desktop-portal-wlr' 'xdg-desktop-portal-gtk' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist' 'slurp' 'grim')
+  depends=('mangowc' 'wl-clip-persist' 'wlr-which-key' 'xdg-desktop-portal-wlr' 'xdg-desktop-portal-gtk' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'slurp' 'grim')
   pkgdesc='my mango configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
   cp -r ${srcdir}/dotfiles/mango "${pkgdir}/usr/share/dotfiles"
@@ -106,13 +106,11 @@ package_jolt-dotfiles() {
   cp -r ${srcdir}/dotfiles/jolt "${pkgdir}/usr/share/dotfiles"
 }
 
-package_wlogout-dotfiles() {
-  depends=('wlogout')
-  pkgdesc='my wlogout configs'
-  mkdir -p "${pkgdir}/usr/share/catppuccin/wlogout/assets/"
+package_wlr-which-key-dotfiles() {
+  depends=('wlr-which-key')
+  pkgdesc='my wlr-which-key configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
-  cp ${srcdir}/*.svg "${pkgdir}/usr/share/catppuccin/wlogout/assets"
-  cp -r ${srcdir}/dotfiles/wlogout "${pkgdir}/usr/share/dotfiles"
+  cp -r ${srcdir}/dotfiles/wlr-which-key "${pkgdir}/usr/share/dotfiles"
 }
 
 package_yay-dotfiles() {
