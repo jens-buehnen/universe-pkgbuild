@@ -108,6 +108,7 @@ package_jolt-dotfiles() {
 
 package_wlr-which-key-dotfiles() {
   depends=('wlr-which-key')
+  optdepends=('pandora' 'fuzzel' 'alacritty' 'freetube' 'steam' 'bemoji')
   pkgdesc='my wlr-which-key configs'
   mkdir -p "${pkgdir}/usr/share/dotfiles"
   cp -r ${srcdir}/dotfiles/wlr-which-key "${pkgdir}/usr/share/dotfiles"
