@@ -1,5 +1,5 @@
 pkgname=("fastfetch-dotfiles" "jolt-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "topgrade-dotfiles" "alacritty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "waybar-dotfiles" "wlr-which-key-dotfiles" "yay-dotfiles" "dotfiles-cli")
-pkgver=r79.73bf316
+pkgver=r81.01396cd
 pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
@@ -24,7 +24,7 @@ package_fastfetch-dotfiles() {
 }
 
 package_fish-dotfiles() {
-  depends=('fish' 'zoxide' 'neovim' 'yay' 'starship' 'fzf' 'eza' 'ripgrep' 'fd' 'doas')
+  depends=('fish' 'fisher' 'zoxide' 'neovim' 'yay' 'fzf' 'eza' 'ripgrep' 'fd' 'doas')
   optdepends=('topgrade' 'git' 'ladybird' 'mpv' 'niri-screen-time' 'tar' 'hyfetch')
   pkgdesc='my fish configs'
   copy fish
