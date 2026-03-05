@@ -1,6 +1,6 @@
 _pkgname=freetube
 pkgname=${_pkgname}-nightly
-pkgver=0.23.13.build7029.054cc64
+pkgver=0.23.14.build7041.cfc8bb3
 pkgrel=1
 pkgdesc="A private YouTube client (nightly build)"
 arch=('x86_64')
@@ -26,11 +26,11 @@ depends=(
   'ttf-liberation'
 )
 install=$pkgname.install
-source=("https://github.com/curbengh/freetube-nightly/releases/latest/download/freetube.pacman.tar.xz")
+source=("https://github.com/jens-buehnen/freetube-nightly/releases/latest/download/freetube.pacman.tar.xz")
 sha256sums=('SKIP')
 
 pkgver() {
-  curl -s https://api.github.com/repos/curbengh/freetube-nightly/releases/latest | jq -r '.tag_name'
+  curl -s https://api.github.com/repos/jens-buehnen/freetube-nightly/releases/latest | jq -r '.tag_name'
 }
 
 package() {
