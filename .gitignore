@@ -1,0 +1,11 @@
+x86_64/*/pkg
+x86_64/*/src
+x86_64/*/*.tar.gz
+x86_64/*/*.tgz
+x86_64/*/*.zip
+x86_64/*/*.svg
+x86_64/*/*.xz
+x86_64/*/*.png
+x86_64/dotfiles/dotfiles
+x86_64/pandora_launcher/PandoraLauncher-Linux-*
+
