@@ -6,6 +6,7 @@ x86_64/*/*.zip
 x86_64/*/*.svg
 x86_64/*/*.xz
 x86_64/*/*.png
+x86_64/*/*.pkg.tar.zst
 x86_64/dotfiles/dotfiles
 x86_64/pandora_launcher/PandoraLauncher-Linux-*
 
