@@ -1,8 +1,7 @@
 pkgname=universe-base
 pkgver=1
-pkgrel=2
+pkgrel=3
 pkgdesc="Base Packages"
 arch=('any')
-depends=('connman' 'mkinitcpio' 'qalculate-gtk' 'wpa_supplicant' 'btrfs-progs' 'cachyos-ananicy-rules' 'coreutils-uutils' 'fakeroot' 'flatpak' '')
-depends=('alacritty-dotfiles' 'dotfiles-cli' 'fastfetch-dotfiles' 'fish-dotfiles' 'fuzzel-dotfiles' 'jolt-dotfiles' 'mango-dotfiles' 'mpv-dotfiles' 'nvim-dotfiles' 'topgrade-dotfiles' 'waybar-dotfiles' 'wlr-which-key-dotfiles' 'yay-dotfiles' )
+depends=('connman' 'mkinitcpio' 'qalculate-gtk' 'wpa_supplicant' 'btrfs-progs' 'cachyos-ananicy-rules' 'coreutils-uutils' 'fakeroot' 'flatpak' 'alacritty-dotfiles' 'dotfiles-cli' 'fastfetch-dotfiles' 'fish-dotfiles' 'fuzzel-dotfiles' 'jolt-dotfiles' 'mango-dotfiles' 'mpv-dotfiles' 'nvim-dotfiles' 'topgrade-dotfiles' 'waybar-dotfiles' 'wlr-which-key-dotfiles' 'yay-dotfiles' )
 
