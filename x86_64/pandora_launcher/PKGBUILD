@@ -17,6 +17,11 @@ depends=(
   'vulkan-driver'
   'openssl'
 )
+
+pkgver() {
+  curl -s https://api.github.com/repos/Moulberry/PandoraLauncher/releases/latest | jq -r '.tag_name'
+}
+
 optdepends=(
   'flite: minecraft narrator support'
 )
