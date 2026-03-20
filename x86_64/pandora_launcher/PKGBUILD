@@ -1,6 +1,6 @@
 pkgname=pandora-launcher
 pkgver=4.1.0
-pkgrel=2
+pkgrel=3
 pkgdesc="A modern Minecraft launcher that balances ease-of-use with powerful instance management features."
 arch=('x86_64')
 url="http://pandora.moulberry.com/"
