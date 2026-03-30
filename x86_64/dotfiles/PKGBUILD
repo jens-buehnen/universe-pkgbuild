@@ -8,117 +8,116 @@ sha256sums=('SKIP')
 groups=(dotfiles)
 
 pkgver() {
-  cd dotfiles
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+	cd dotfiles
+	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
 }
 
 copy() {
-  mkdir -p "${pkgdir}/usr/share/dotfiles"
-  cp -r "${srcdir}/dotfiles/$1" "${pkgdir}/usr/share/dotfiles"
+	mkdir -p "${pkgdir}/usr/share/dotfiles"
+	cp -r "${srcdir}/dotfiles/$1" "${pkgdir}/usr/share/dotfiles"
 }
 
 package_fastfetch-dotfiles() {
-  depends=('fastfetch')
-  pkgdesc='my fastfetch configs'
-  copy fastfetch
+	depends=('fastfetch')
+	pkgdesc='my fastfetch configs'
+	copy fastfetch
 }
 
 package_fish-dotfiles() {
-  depends=('fish' 'fisher' 'zoxide' 'neovim' 'yay' 'fzf' 'eza' 'ripgrep' 'fd' 'doas')
-  optdepends=('topgrade' 'git' 'ladybird' 'mpv' 'niri-screen-time' 'tar' 'hyfetch')
-  pkgdesc='my fish configs'
-  copy fish
+	depends=('fish' 'fisher' 'zoxide' 'neovim' 'yay' 'fzf' 'eza' 'ripgrep' 'fd' 'doas')
+	optdepends=('topgrade' 'git' 'ladybird' 'mpv' 'niri-screen-time' 'tar' 'hyfetch')
+	pkgdesc='my fish configs'
+	copy fish
 }
 
 package_fuzzel-dotfiles() {
-  depends=('fuzzel' 'ttf-jetbrains-mono-nerd')
-  pkgdesc='my fuzzel configs'
-  copy fuzzel
+	depends=('fuzzel' 'ttf-jetbrains-mono-nerd')
+	pkgdesc='my fuzzel configs'
+	copy fuzzel
 }
 
 package_xremap-dotfiles() {
-  depends=('xremap-wlroots')
-  pkgdesc='my xremap configs'
-  copy xremap
+	depends=('xremap-wlroots')
+	pkgdesc='my xremap configs'
+	copy xremap
 }
 
 package_alacritty-dotfiles() {
-  depends=('alacritty' 'ttf-jetbrains-mono-nerd')
-  pkgdesc='my alacritty configs'
-  copy alacritty
+	depends=('alacritty' 'ttf-jetbrains-mono-nerd')
+	pkgdesc='my alacritty configs'
+	copy alacritty
 }
 
 package_ghostty-dotfiles() {
-  depends=('ghostty' 'ttf-jetbrains-mono-nerd')
-  pkgdesc='my ghostty configs'
-  copy ghostty
+	depends=('ghostty' 'ttf-jetbrains-mono-nerd')
+	pkgdesc='my ghostty configs'
+	copy ghostty
 }
 
 package_topgrade-dotfiles() {
-  depends=('topgrade' 'dotfiles-cli')
-  pkgdesc='my topgrade configs'
-  copy topgrade.d
+	depends=('topgrade' 'dotfiles-cli')
+	pkgdesc='my topgrade configs'
+	copy topgrade.d
 }
 
 package_mpv-dotfiles() {
-  depends=('mpv')
-  pkgdesc='my mpv configs'
-  copy mpv
+	depends=('mpv')
+	pkgdesc='my mpv configs'
+	copy mpv
 }
 
 package_niri-dotfiles() {
-  depends=('niri' 'wl-clipboard' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'xdg-desktop-portal-gtk' 'catppuccin-gtk-theme-mocha-pink' 'chameleos' 'niri-screen-time' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist')
-  optdepends=('vesktop' 'stasis' 'steam' 'xdg-desktop-portal-gnome')
-  pkgdesc='my niri configs'
-  copy niri
+	depends=('niri' 'wl-clipboard' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'xdg-desktop-portal-gtk' 'catppuccin-gtk-theme-mocha-pink' 'chameleos' 'niri-screen-time' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist')
+	optdepends=('vesktop' 'stasis' 'steam' 'xdg-desktop-portal-gnome')
+	pkgdesc='my niri configs'
+	copy niri
 }
 
 package_mango-dotfiles() {
-  depends=('mangowc' 'sox' 'wooz-git' 'wl-clip-persist' 'wlr-which-key' 'xdg-desktop-portal-wlr' 'xdg-desktop-portal-gtk' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'slurp' 'grim')
-  pkgdesc='my mango configs'
-  copy mango
+	depends=('mangowc' 'sox' 'wooz-git' 'wl-clip-persist' 'wlr-which-key' 'xdg-desktop-portal-wlr' 'xdg-desktop-portal-gtk' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'slurp' 'grim')
+	pkgdesc='my mango configs'
+	copy mango
 }
 
 package_nvim-dotfiles() {
-  depends=('neovim' 'git' 'curl')
-  pkgdesc='my nvim configs'
-  copy nvim
+	depends=('neovim' 'git' 'curl')
+	pkgdesc='my nvim configs'
+	copy nvim
 }
 
 package_swaylock-dotfiles() {
-  depends=('swaylock')
-  pkgdesc='my swaylock configs'
-  copy swaylock
+	depends=('swaylock')
+	pkgdesc='my swaylock configs'
+	copy swaylock
 }
 
 package_waybar-dotfiles() {
-  depends=('waybar' 'bluetui' 'wiremix' 'btop' 'alacritty' 'jolt' 'pipewire-pulse')
-  optdepends=('niri' 'mangowc')
-  pkgdesc='my waybar configs'
-  copy waybar
+	depends=('waybar' 'bluetui' 'wiremix' 'btop' 'alacritty' 'jolt' 'pipewire-pulse')
+	optdepends=('niri' 'mangowc')
+	pkgdesc='my waybar configs'
+	copy waybar
 }
 
 package_jolt-dotfiles() {
-  depends=('jolt')
-  pkgdesc='my jolt configs'
-  copy jolt
+	depends=('jolt')
+	pkgdesc='my jolt configs'
+	copy jolt
 }
 
 package_wlr-which-key-dotfiles() {
-  depends=('wlr-which-key')
-  optdepends=('pandora' 'qalculate-gtk' 'swaylock' 'fuzzel' 'alacritty' 'freetube' 'steam' 'bemoji')
-  pkgdesc='my wlr-which-key configs'
-  copy wlr-which-key
+	depends=('wlr-which-key' 'pandora' 'qalculate-gtk' 'swaylock' 'fuzzel' 'alacritty' 'freetube' 'steam' 'bemoji')
+	pkgdesc='my wlr-which-key configs'
+	copy wlr-which-key
 }
 
 package_yay-dotfiles() {
-  depends=('yay')
-  pkgdesc='my yay configs'
-  copy yay
+	depends=('yay')
+	pkgdesc='my yay configs'
+	copy yay
 }
 
 package_dotfiles-cli() {
-  pkgdesc='a cli to install all dotfiles'
-  mkdir -p "$pkgdir/usr/bin"
-  install -D -m755 ../dotfiles-cli "${pkgdir}/usr/bin"
+	pkgdesc='a cli to install all dotfiles'
+	mkdir -p "$pkgdir/usr/bin"
+	install -D -m755 ../dotfiles-cli "${pkgdir}/usr/bin"
 }
