@@ -1,6 +1,6 @@
 pkgname=("fastfetch-dotfiles" "jolt-dotfiles" "swaylock-dotfiles" "xremap-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "topgrade-dotfiles" "alacritty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "waybar-dotfiles" "wlr-which-key-dotfiles" "yay-dotfiles" "dotfiles-cli")
-pkgver=r102.4c082bd
-pkgrel=3
+pkgver=r104.4e9cf6d
+pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dotfiles.git')
@@ -48,12 +48,6 @@ package_alacritty-dotfiles() {
 	copy alacritty
 }
 
-package_ghostty-dotfiles() {
-	depends=('ghostty' 'ttf-jetbrains-mono-nerd')
-	pkgdesc='my ghostty configs'
-	copy ghostty
-}
-
 package_topgrade-dotfiles() {
 	depends=('topgrade' 'dotfiles-cli')
 	pkgdesc='my topgrade configs'
@@ -66,12 +60,6 @@ package_mpv-dotfiles() {
 	copy mpv
 }
 
-package_niri-dotfiles() {
-	depends=('niri' 'wl-clipboard' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'xdg-desktop-portal-gtk' 'catppuccin-gtk-theme-mocha-pink' 'chameleos' 'niri-screen-time' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'cliphist')
-	optdepends=('vesktop' 'stasis' 'steam' 'xdg-desktop-portal-gnome')
-	pkgdesc='my niri configs'
-	copy niri
-}
 
 package_mango-dotfiles() {
 	depends=('mangowc' 'sox' 'wooz-git' 'wl-clip-persist' 'wlr-which-key' 'xdg-desktop-portal-wlr' 'xdg-desktop-portal-gtk' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'slurp' 'grim')
