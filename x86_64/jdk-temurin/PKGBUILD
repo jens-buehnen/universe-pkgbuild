@@ -1,9 +1,9 @@
-_majorver=25
-_completever=25.0.2
-_updatever=10
+_majorver=26
+_completever=26.0.0
+_updatever=35
 pkgrel=1
 pkgver=${_completever}.u${_updatever}
-_tag_ver=${_completever}+${_updatever}
+_tag_ver=${_majorver}+${_updatever}
 _versuffix=U
 
 pkgname=jdk-temurin
@@ -30,7 +30,7 @@ install=install_jdk-temurin.sh
 options=(!strip)
 
 source=(https://github.com/adoptium/temurin${_majorver}-binaries/releases/download/jdk-${_tag_ver/+/%2B}/OpenJDK${_majorver}${_versuffix}-jdk_x64_linux_hotspot_${_tag_ver/+/_}.tar.gz)
-sha256sums=('SKIP')
+sha256sums=(SKIP)
 
 _jvmdir=/usr/lib/jvm/java-${_majorver}-temurin
 _jdkdir=jdk-${_tag_ver}
@@ -57,4 +57,3 @@ package() {
   ln -sf /etc/ssl/certs/java/cacerts lib/security/cacerts
 
 }
-
