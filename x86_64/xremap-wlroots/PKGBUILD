@@ -1,5 +1,5 @@
 pkgname=xremap-wlroots
-pkgver=0.15.0
+pkgver=0.15.1
 pkgrel=1
 pkgdesc='Dynamic key remapper for X11 and Wayland'
 url='https://github.com/k0kubun/xremap'
