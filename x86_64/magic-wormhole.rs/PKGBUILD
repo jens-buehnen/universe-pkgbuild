@@ -1,5 +1,5 @@
 pkgname="magic-wormhole.rs"
-pkgver=0.7.6
+pkgver=0.8.1
 pkgrel=1
 arch=('x86_64')
 pkgdesc="Magic Wormhole but written in Rust."
