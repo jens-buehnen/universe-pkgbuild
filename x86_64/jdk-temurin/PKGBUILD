@@ -1,9 +1,9 @@
 _majorver=26
-_completever=26.0.0
-_updatever=35
-pkgrel=2
+_completever=26.0.1
+_updatever=8
+pkgrel=1
 pkgver=${_completever}.u${_updatever}
-_tag_ver=${_majorver}+${_updatever}
+_tag_ver=${_completever}+${_updatever}
 _versuffix=U
 
 pkgname=jdk-temurin
