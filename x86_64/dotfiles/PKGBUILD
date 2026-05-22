@@ -1,5 +1,5 @@
 pkgname=("fastfetch-dotfiles" "jolt-dotfiles" "swaylock-dotfiles" "xremap-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "topgrade-dotfiles" "alacritty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "waybar-dotfiles" "wlr-which-key-dotfiles" "yay-dotfiles" "dotfiles-cli")
-pkgver=r118.52bc94c
+pkgver=r119.67454bc
 pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
@@ -68,7 +68,7 @@ package_mango-dotfiles() {
 }
 
 package_nvim-dotfiles() {
-	depends=('neovim' 'stylua' 'git' 'curl')
+	depends=('neovim' 'stylua' 'git' 'curl' 'wl-clipboard')
 	optdepends=('rustfmt' 'deno' 'shfmt' 'taplo')
 	pkgdesc='my nvim configs'
 	copy nvim
