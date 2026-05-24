@@ -1,6 +1,6 @@
 _pkgname=freetube
 pkgname=${_pkgname}-nightly
-pkgver=0.24.0.build7326.df6a527
+pkgver=0.24.0.build7365.cda9553
 pkgrel=1
 pkgdesc="A private YouTube client (nightly build)"
 arch=('x86_64')
@@ -8,6 +8,7 @@ url="https://github.com/FreeTubeApp/FreeTube"
 license=('AGPL-3.0-or-later')
 provides=("${_pkgname}")
 conflicts=("${_pkgname}")
+makedepends=('curl' 'jq')
 depends=(
   'c-ares'
   'ffmpeg'
