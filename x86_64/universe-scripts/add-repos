@@ -21,3 +21,9 @@ if ! grep chaotic-aur /etc/pacman.conf &>/dev/null; then
   echo '[chaotic-aur]' | tee -a /etc/pacman.conf
   echo 'Include = /etc/pacman.d/chaotic-mirrorlist' | tee -a /etc/pacman.conf
 fi
+if ! grep universe /etc/pacman.conf &>/dev/null; then
+  echo '' | tee -a /etc/pacman.conf
+  echo '[universe]' | tee -a /etc/pacman.conf
+  echo 'SigLevel = Optional DatabaseOptional' | tee -a /etc/pacman.conf
+  echo 'Server = https://github.com/jens-buehnen/universe-core-repo/raw/refs/heads/master/$arch' | tee -a /etc/pacman.conf
+fi

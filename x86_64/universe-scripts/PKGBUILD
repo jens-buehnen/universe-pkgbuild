@@ -1,8 +1,8 @@
 pkgname=universe-scripts
-pkgver=1.4
+pkgver=1.5
 pkgrel=1
 pkgdesc="Random Scripts i use"
-depends=('doas' 'rate-mirrors' 'yay')
+depends=('doas' 'rate-mirrors')
 arch=('any')
 
 package() {
