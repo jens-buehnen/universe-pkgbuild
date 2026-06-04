@@ -1,5 +1,5 @@
 pkgname=("fastfetch-dotfiles" "jolt-dotfiles" "swaylock-dotfiles" "xremap-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "topgrade-dotfiles" "alacritty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "waybar-dotfiles" "wlr-which-key-dotfiles" "yay-dotfiles" "dotfiles-cli")
-pkgver=r121.51a981a
+pkgver=r122.2796a53
 pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
@@ -62,7 +62,7 @@ package_mpv-dotfiles() {
 
 
 package_mango-dotfiles() {
-	depends=('mangowm' 'sox' 'wooz-git' 'wlr-randr' 'wl-clip-persist' 'wlr-which-key' 'xdg-desktop-portal-wlr' 'xdg-desktop-portal-gtk' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'slurp' 'grim')
+	depends=('mangowm' 'sox' 'wlr-randr' 'wl-clip-persist' 'wlr-which-key' 'xdg-desktop-portal-wlr' 'xdg-desktop-portal-gtk' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'bemoji' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'slurp' 'grim')
 	pkgdesc='my mango configs'
 	copy mango
 }
