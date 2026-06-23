@@ -1,6 +1,6 @@
 pkgname=("fastfetch-dotfiles" "jolt-dotfiles" "swaylock-dotfiles" "xremap-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "topgrade-dotfiles" "alacritty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "waybar-dotfiles" "wlr-which-key-dotfiles" "yay-dotfiles" "dotfiles-cli")
 pkgver=r136.fe5b91c
-pkgrel=1
+pkgrel=2
 pkgdesc="my personal dotfiles"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dotfiles.git')
@@ -94,7 +94,7 @@ package_jolt-dotfiles() {
 }
 
 package_wlr-which-key-dotfiles() {
-	depends=('wlr-which-key' 'prismlauncher' 'qalculate-gtk' 'swaylock' 'fuzzel' 'alacritty' 'freetube' 'steam' 'bemoji')
+	depends=('wlr-which-key' 'pandora-launcher' 'qalculate-gtk' 'swaylock' 'fuzzel' 'alacritty' 'freetube' 'steam' 'bemoji')
 	pkgdesc='my wlr-which-key configs'
 	copy wlr-which-key
 }
