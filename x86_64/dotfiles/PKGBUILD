@@ -1,6 +1,6 @@
 pkgname=("fastfetch-dotfiles" "jolt-dotfiles" "swaylock-dotfiles" "xremap-dotfiles" "fish-dotfiles" "fuzzel-dotfiles" "topgrade-dotfiles" "alacritty-dotfiles" "mpv-dotfiles" "mango-dotfiles" "nvim-dotfiles" "waybar-dotfiles" "wlr-which-key-dotfiles" "yay-dotfiles" "dotfiles-cli")
-pkgver=r136.fe5b91c
-pkgrel=2
+pkgver=r137.e964664
+pkgrel=1
 pkgdesc="my personal dotfiles"
 arch=('any')
 source=('git+https://github.com/jens-buehnen/dotfiles.git')
