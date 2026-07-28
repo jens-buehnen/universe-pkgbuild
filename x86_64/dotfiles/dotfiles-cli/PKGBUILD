@@ -1,0 +1,11 @@
+pkgname=('dotfiles-cli')
+pkgver=1
+pkgrel=1
+pkgdesc='a cli to install all dotfiles'
+arch=('any')
+depends=('bash')
+
+package() {
+	mkdir -p $pkgdir/usr/bin
+	install -D -m755 ../dotfiles-cli "${pkgdir}/usr/bin"
+}
