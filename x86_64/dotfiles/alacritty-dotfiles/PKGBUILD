@@ -1,4 +1,4 @@
-pkgname=('')
+pkgname=('alacritty-dotfiles')
 pkgver=1
 pkgrel=1
 pkgdesc='my alacritty configs'

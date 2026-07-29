@@ -1,15 +1,15 @@
-pkgname=('')
+pkgname=('swaylock-dotfiles')
 pkgver=1
 pkgrel=1
-pkgdesc='my alacritty configs'
+pkgdesc='my swaylock configs'
 arch=('any')
-depends=('alacritty' 'ttf-jetbrains-mono-nerd')
+depends=('swaylock-effects')
 
 pkgver() {
-	printf "r%s.%s" "$(git rev-list --count HEAD -- alacritty)" "$(git log -1 --format="%h" -- alacritty)"
+	printf "r%s.%s" "$(git rev-list --count HEAD -- swaylock)" "$(git log -1 --format="%h" -- swaylock)"
 }
 
 package() {
 	mkdir -p "${pkgdir}/usr/share/dotfiles"
-	cp -r "${srcdir}/dotfiles/alacritty" "${pkgdir}/usr/share/dotfiles"
+	cp -r "${srcdir}/dotfiles/swaylock" "${pkgdir}/usr/share/dotfiles"
 }

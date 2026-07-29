@@ -1,15 +1,15 @@
-pkgname=('')
+pkgname=('waybar-dotfiles')
 pkgver=1
 pkgrel=1
-pkgdesc='my alacritty configs'
+pkgdesc='my waybar configs'
 arch=('any')
-depends=('alacritty' 'ttf-jetbrains-mono-nerd')
+depends=('waybar-git' 'bluetui' 'wiremix' 'bottom' 'jolt' 'alacritty' 'pipewire-pulse' 'ttf-jetbrains-mono-nerd')
 
 pkgver() {
-	printf "r%s.%s" "$(git rev-list --count HEAD -- alacritty)" "$(git log -1 --format="%h" -- alacritty)"
+	printf "r%s.%s" "$(git rev-list --count HEAD -- waybar)" "$(git log -1 --format="%h" -- waybar)"
 }
 
 package() {
 	mkdir -p "${pkgdir}/usr/share/dotfiles"
-	cp -r "${srcdir}/dotfiles/alacritty" "${pkgdir}/usr/share/dotfiles"
+	cp -r "${srcdir}/dotfiles/waybar" "${pkgdir}/usr/share/dotfiles"
 }

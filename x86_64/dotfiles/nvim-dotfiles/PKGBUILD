@@ -1,15 +1,15 @@
-pkgname=('')
+pkgname=('nvim-dotfiles')
 pkgver=1
 pkgrel=1
-pkgdesc='my alacritty configs'
+pkgdesc='my neovim configs'
 arch=('any')
-depends=('alacritty' 'ttf-jetbrains-mono-nerd')
+depends=('neovim' 'stylua' 'git' 'curl' 'wl-clipboard')
 
 pkgver() {
-	printf "r%s.%s" "$(git rev-list --count HEAD -- alacritty)" "$(git log -1 --format="%h" -- alacritty)"
+	printf "r%s.%s" "$(git rev-list --count HEAD -- nvim)" "$(git log -1 --format="%h" -- nvim)"
 }
 
 package() {
 	mkdir -p "${pkgdir}/usr/share/dotfiles"
-	cp -r "${srcdir}/dotfiles/alacritty" "${pkgdir}/usr/share/dotfiles"
+	cp -r "${srcdir}/dotfiles/nvim" "${pkgdir}/usr/share/dotfiles"
 }

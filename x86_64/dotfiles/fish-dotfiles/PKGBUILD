@@ -1,15 +1,16 @@
-pkgname=('')
+pkgname=('fish-dotfiles')
 pkgver=1
 pkgrel=1
-pkgdesc='my alacritty configs'
+pkgdesc='my fish configs'
 arch=('any')
-depends=('alacritty' 'ttf-jetbrains-mono-nerd')
+depends=('fish' 'zoxide' 'eza' 'yay' 'eza' 'ripgrep' 'fd' 'doas')
+optdepends=('topgrade' 'git' 'ladybird' 'mpv' 'tar' 'hyfetch' 'unp')
 
 pkgver() {
-	printf "r%s.%s" "$(git rev-list --count HEAD -- alacritty)" "$(git log -1 --format="%h" -- alacritty)"
+	printf "r%s.%s" "$(git rev-list --count HEAD -- fish)" "$(git log -1 --format="%h" -- fish)"
 }
 
 package() {
 	mkdir -p "${pkgdir}/usr/share/dotfiles"
-	cp -r "${srcdir}/dotfiles/alacritty" "${pkgdir}/usr/share/dotfiles"
+	cp -r "${srcdir}/dotfiles/fish" "${pkgdir}/usr/share/dotfiles"
 }

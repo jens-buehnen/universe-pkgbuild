@@ -1,15 +1,15 @@
-pkgname=('')
+pkgname=('topgrade-dotfiles')
 pkgver=1
 pkgrel=1
-pkgdesc='my alacritty configs'
+pkgdesc='my topgrade-dotfiles configs'
 arch=('any')
-depends=('alacritty' 'ttf-jetbrains-mono-nerd')
+depends=('topgrade' 'dotfiles-cli')
 
 pkgver() {
-	printf "r%s.%s" "$(git rev-list --count HEAD -- alacritty)" "$(git log -1 --format="%h" -- alacritty)"
+	printf "r%s.%s" "$(git rev-list --count HEAD -- topgrade.d)" "$(git log -1 --format="%h" -- topgrade.d)"
 }
 
 package() {
 	mkdir -p "${pkgdir}/usr/share/dotfiles"
-	cp -r "${srcdir}/dotfiles/alacritty" "${pkgdir}/usr/share/dotfiles"
+	cp -r "${srcdir}/dotfiles/topgrade.d" "${pkgdir}/usr/share/dotfiles"
 }

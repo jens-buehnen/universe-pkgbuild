@@ -1,4 +1,4 @@
-pkgname=('')
+pkgname=('jolt-dotfiles')
 pkgver=1
 pkgrel=1
 pkgdesc='my alacritty configs'
@@ -6,10 +6,10 @@ arch=('any')
 depends=('alacritty' 'ttf-jetbrains-mono-nerd')
 
 pkgver() {
-	printf "r%s.%s" "$(git rev-list --count HEAD -- alacritty)" "$(git log -1 --format="%h" -- alacritty)"
+	printf "r%s.%s" "$(git rev-list --count HEAD -- jolt)" "$(git log -1 --format="%h" -- jolt)"
 }
 
 package() {
 	mkdir -p "${pkgdir}/usr/share/dotfiles"
-	cp -r "${srcdir}/dotfiles/alacritty" "${pkgdir}/usr/share/dotfiles"
+	cp -r "${srcdir}/dotfiles/jolt" "${pkgdir}/usr/share/dotfiles"
 }

@@ -1,15 +1,16 @@
-pkgname=('')
+pkgname=('wlr-which-key-dotfiles')
 pkgver=1
 pkgrel=1
-pkgdesc='my alacritty configs'
+pkgdesc='my wlr which key configs'
 arch=('any')
-depends=('alacritty' 'ttf-jetbrains-mono-nerd')
+depends=('wlr-which-key' 'fuzzel')
+optdepends=('pandora-launcher' 'qalculate-gtk' 'swaylock-effects' 'alacritty' 'freetube' 'steam' 'bemoji')
 
 pkgver() {
-	printf "r%s.%s" "$(git rev-list --count HEAD -- alacritty)" "$(git log -1 --format="%h" -- alacritty)"
+	printf "r%s.%s" "$(git rev-list --count HEAD -- wlr-which-key)" "$(git log -1 --format="%h" -- wlr-which-key)"
 }
 
 package() {
 	mkdir -p "${pkgdir}/usr/share/dotfiles"
-	cp -r "${srcdir}/dotfiles/alacritty" "${pkgdir}/usr/share/dotfiles"
+	cp -r "${srcdir}/dotfiles/wlr-which-key" "${pkgdir}/usr/share/dotfiles"
 }

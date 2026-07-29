@@ -1,15 +1,15 @@
-pkgname=('')
+pkgname=('mango-dotfiles')
 pkgver=1
 pkgrel=1
-pkgdesc='my alacritty configs'
+pkgdesc='my mango configs'
 arch=('any')
-depends=('alacritty' 'ttf-jetbrains-mono-nerd')
+depends=('mango' 'sox' 'wl-clip-persist' 'wlr-which-key' 'xdg-desktop-portal-wlr' 'xdg-desktop-portal-gtk' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'slurp' 'grim')
 
 pkgver() {
-	printf "r%s.%s" "$(git rev-list --count HEAD -- alacritty)" "$(git log -1 --format="%h" -- alacritty)"
+	printf "r%s.%s" "$(git rev-list --count HEAD -- mango)" "$(git log -1 --format="%h" -- mango)"
 }
 
 package() {
 	mkdir -p "${pkgdir}/usr/share/dotfiles"
-	cp -r "${srcdir}/dotfiles/alacritty" "${pkgdir}/usr/share/dotfiles"
+	cp -r "${srcdir}/dotfiles/mango" "${pkgdir}/usr/share/dotfiles"
 }
