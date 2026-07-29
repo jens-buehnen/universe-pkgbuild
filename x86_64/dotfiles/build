@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+for i in ./*; do
+	pushd $i
+	makepkg
+	popd
+done
