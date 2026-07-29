@@ -4,6 +4,9 @@ pkgrel=1
 pkgdesc='a cli to install all dotfiles'
 arch=('any')
 depends=('bash')
+source=('dotfiles-cli')
+sha256sums=('SKIP')
+groups=('dotfiles')
 
 package() {
 	mkdir -p "${pkgdir}/usr/bin"

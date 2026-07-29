@@ -1,11 +1,15 @@
 pkgname=('fastfetch-dotfiles')
-pkgver=1
+pkgver=r4.52bc94c
 pkgrel=1
 pkgdesc='my fastfetch configs'
 arch=('any')
 depends=('fastfetch')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+groups=('dotfiles')
 
 pkgver() {
+	cd dotfiles
 	printf "r%s.%s" "$(git rev-list --count HEAD -- fastfetch)" "$(git log -1 --format="%h" -- fastfetch)"
 }
 

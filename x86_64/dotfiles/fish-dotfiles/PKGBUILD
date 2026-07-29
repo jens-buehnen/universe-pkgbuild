@@ -1,12 +1,16 @@
 pkgname=('fish-dotfiles')
-pkgver=1
+pkgver=r29.f507a81
 pkgrel=1
 pkgdesc='my fish configs'
 arch=('any')
 depends=('fish' 'zoxide' 'eza' 'yay' 'eza' 'ripgrep' 'fd' 'doas')
 optdepends=('topgrade' 'git' 'ladybird' 'mpv' 'tar' 'hyfetch' 'unp')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+groups=('dotfiles')
 
 pkgver() {
+	cd dotfiles
 	printf "r%s.%s" "$(git rev-list --count HEAD -- fish)" "$(git log -1 --format="%h" -- fish)"
 }
 

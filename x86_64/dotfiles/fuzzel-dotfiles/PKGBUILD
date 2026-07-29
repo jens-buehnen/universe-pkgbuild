@@ -1,11 +1,15 @@
 pkgname=('fuzzel-dotfiles')
-pkgver=1
+pkgver=r3.be01e6e
 pkgrel=1
 pkgdesc='my fuzzel configs'
 arch=('any')
 depends=('fuzzel' 'ttf-jetbrains-mono-nerd')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+groups=('dotfiles')
 
 pkgver() {
+	cd dotfiles
 	printf "r%s.%s" "$(git rev-list --count HEAD -- fuzzel)" "$(git log -1 --format="%h" -- fuzzel)"
 }
 

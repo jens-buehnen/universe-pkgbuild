@@ -1,11 +1,15 @@
 pkgname=('jolt-dotfiles')
-pkgver=1
+pkgver=r1.73f3b6e
 pkgrel=1
 pkgdesc='my alacritty configs'
 arch=('any')
 depends=('alacritty' 'ttf-jetbrains-mono-nerd')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+groups=('dotfiles')
 
 pkgver() {
+	cd dotfiles
 	printf "r%s.%s" "$(git rev-list --count HEAD -- jolt)" "$(git log -1 --format="%h" -- jolt)"
 }
 

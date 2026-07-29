@@ -1,11 +1,15 @@
 pkgname=('alacritty-dotfiles')
-pkgver=1
+pkgver=r2.390a9b2
 pkgrel=1
 pkgdesc='my alacritty configs'
 arch=('any')
 depends=('alacritty' 'ttf-jetbrains-mono-nerd')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+groups=('dotfiles')
 
 pkgver() {
+	cd dotfiles
 	printf "r%s.%s" "$(git rev-list --count HEAD -- alacritty)" "$(git log -1 --format="%h" -- alacritty)"
 }
 

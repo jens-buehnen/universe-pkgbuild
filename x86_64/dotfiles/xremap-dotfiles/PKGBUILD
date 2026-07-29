@@ -1,11 +1,15 @@
 pkgname=('xremap-dotfiles')
-pkgver=1
+pkgver=r2.52bc94c
 pkgrel=1
 pkgdesc='my xremap configs'
 arch=('any')
 depends=('xremap-wlroots')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+groups=('dotfiles')
 
 pkgver() {
+	cd dotfiles
 	printf "r%s.%s" "$(git rev-list --count HEAD -- xremap)" "$(git log -1 --format="%h" -- xremap)"
 }
 

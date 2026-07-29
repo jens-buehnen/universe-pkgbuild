@@ -1,11 +1,15 @@
 pkgname=('mango-dotfiles')
-pkgver=1
+pkgver=r33.0c6bfdc
 pkgrel=1
 pkgdesc='my mango configs'
 arch=('any')
-depends=('mango' 'sox' 'wl-clip-persist' 'wlr-which-key' 'xdg-desktop-portal-wlr' 'xdg-desktop-portal-gtk' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'slurp' 'grim')
+depends=('mangowm' 'sox' 'wl-clip-persist' 'wlr-which-key' 'xdg-desktop-portal-wlr' 'xdg-desktop-portal-gtk' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'swaybg' 'fd' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'waybar' 'bibata-cursor-theme' 'mate-polkit' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'slurp' 'grim')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+groups=('dotfiles')
 
 pkgver() {
+	cd dotfiles
 	printf "r%s.%s" "$(git rev-list --count HEAD -- mango)" "$(git log -1 --format="%h" -- mango)"
 }
 

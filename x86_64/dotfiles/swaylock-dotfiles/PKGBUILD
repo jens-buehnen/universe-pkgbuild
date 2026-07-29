@@ -1,11 +1,15 @@
 pkgname=('swaylock-dotfiles')
-pkgver=1
+pkgver=r2.f2a36d0
 pkgrel=1
 pkgdesc='my swaylock configs'
 arch=('any')
 depends=('swaylock-effects')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+groups=('dotfiles')
 
 pkgver() {
+	cd dotfiles
 	printf "r%s.%s" "$(git rev-list --count HEAD -- swaylock)" "$(git log -1 --format="%h" -- swaylock)"
 }
 

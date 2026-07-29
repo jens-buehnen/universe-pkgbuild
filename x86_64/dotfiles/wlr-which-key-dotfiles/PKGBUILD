@@ -1,12 +1,16 @@
 pkgname=('wlr-which-key-dotfiles')
-pkgver=1
+pkgver=r18.e964664
 pkgrel=1
 pkgdesc='my wlr which key configs'
 arch=('any')
 depends=('wlr-which-key' 'fuzzel')
 optdepends=('pandora-launcher' 'qalculate-gtk' 'swaylock-effects' 'alacritty' 'freetube' 'steam' 'bemoji')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+groups=('dotfiles')
 
 pkgver() {
+	cd dotfiles
 	printf "r%s.%s" "$(git rev-list --count HEAD -- wlr-which-key)" "$(git log -1 --format="%h" -- wlr-which-key)"
 }
 

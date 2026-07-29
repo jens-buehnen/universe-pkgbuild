@@ -1,11 +1,15 @@
 pkgname=('mpv-dotfiles')
-pkgver=1
+pkgver=r4.8e00e06
 pkgrel=1
 pkgdesc='my mpv configs'
 arch=('any')
 depends=('mpv' 'ttf-jetbrains-mono-nerd')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+groups=('dotfiles')
 
 pkgver() {
+	cd dotfiles
 	printf "r%s.%s" "$(git rev-list --count HEAD -- mpv)" "$(git log -1 --format="%h" -- mpv)"
 }
 

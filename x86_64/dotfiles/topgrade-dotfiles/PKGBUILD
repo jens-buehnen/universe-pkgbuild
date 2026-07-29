@@ -1,11 +1,15 @@
 pkgname=('topgrade-dotfiles')
-pkgver=1
+pkgver=r1.8f582f4
 pkgrel=1
 pkgdesc='my topgrade-dotfiles configs'
 arch=('any')
 depends=('topgrade' 'dotfiles-cli')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+groups=('dotfiles')
 
 pkgver() {
+	cd dotfiles
 	printf "r%s.%s" "$(git rev-list --count HEAD -- topgrade.d)" "$(git log -1 --format="%h" -- topgrade.d)"
 }
 
