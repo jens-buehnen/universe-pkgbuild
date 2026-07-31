@@ -1,7 +1,7 @@
 pkgname=universe-base
 pkgver=1
-pkgrel=8
+pkgrel=9
 pkgdesc="Base Packages"
 arch=('any')
-depends=('fakeroot' 'imv' 'cloudflare-speed-cli' 'steam' 'xarchiver' 'mkinitcpio' 'qalculate-gtk' 'btrfs-progs' 'cachyos-ananicy-rules' 'coreutils-uutils' 'fakeroot' 'flatpak')
+depends=('fakeroot' 'imv' 'cloudflare-speed-cli' 'steam' 'xarchiver' 'networkmanager' 'mkinitcpio' 'qalculate-gtk' 'btrfs-progs' 'cachyos-ananicy-rules' 'coreutils-uutils' 'fakeroot' 'flatpak')
 
