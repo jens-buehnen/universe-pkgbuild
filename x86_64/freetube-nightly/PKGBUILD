@@ -1,6 +1,6 @@
 _pkgname=freetube
 pkgname=${_pkgname}-nightly
-pkgver=0.25.1.buildundefined.d429de4
+pkgver=0.25.1.build7588.8e4ca31
 pkgrel=1
 pkgdesc="A private YouTube client (nightly build)"
 arch=('x86_64')
