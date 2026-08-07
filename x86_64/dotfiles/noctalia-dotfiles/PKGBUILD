@@ -1,0 +1,19 @@
+pkgname=('noctalia-dotfiles')
+pkgver=r1.36aad5c
+pkgrel=1
+pkgdesc='my noctalia configs'
+arch=('any')
+depends=('noctalia')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+groups=('dotfiles')
+
+pkgver() {
+	cd dotfiles
+	printf "r%s.%s" "$(git rev-list --count HEAD -- noctalia)" "$(git log -1 --format="%h" -- noctalia)"
+}
+
+package() {
+	mkdir -p "${pkgdir}/usr/share/dotfiles"
+	cp -r "${srcdir}/dotfiles/noctalia" "${pkgdir}/usr/share/dotfiles"
+}
