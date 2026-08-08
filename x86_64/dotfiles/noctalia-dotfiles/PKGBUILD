@@ -1,5 +1,5 @@
 pkgname=('noctalia-dotfiles')
-pkgver=r1.36aad5c
+pkgver=r2.3e71c8b
 pkgrel=1
 pkgdesc='my noctalia configs'
 arch=('any')
