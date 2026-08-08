@@ -1,0 +1,19 @@
+pkgname=('gtk4-dotfiles')
+pkgver=r1.bb053c6
+pkgrel=1
+pkgdesc='my gtk-4 configs'
+arch=('any')
+depends=('gtk4' 'ttf-jetbrains-mono-nerd' 'bibata-cursor-theme' 'catppuccin-gtk-theme-mocha-pink')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+groups=('dotfiles')
+
+pkgver() {
+	cd dotfiles
+	printf "r%s.%s" "$(git rev-list --count HEAD -- gtk-4.0)" "$(git log -1 --format="%h" -- gtk-4.0)"
+}
+
+package() {
+	mkdir -p "${pkgdir}/usr/share/dotfiles"
+	cp -r "${srcdir}/dotfiles/gtk-4.0" "${pkgdir}/usr/share/dotfiles"
+}

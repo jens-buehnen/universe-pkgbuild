@@ -1,9 +1,9 @@
 pkgname=('mango-dotfiles')
-pkgver=r34.36aad5c
+pkgver=r35.bb053c6
 pkgrel=1
 pkgdesc='my mango configs'
 arch=('any')
-depends=('mangowm' 'wl-clip-persist' 'wlr-which-key' 'xdg-desktop-portal-wlr' 'xdg-desktop-portal-gtk' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'papirus-icon-theme' 'remove-adwaita' 'catppuccin-gtk-theme-mocha-pink' 'bibata-cursor-theme' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'noctalia')
+depends=('mangowm' 'wl-clip-persist' 'wlr-which-key' 'xdg-desktop-portal-wlr' 'xdg-desktop-portal-gtk' 'ttf-jetbrains-mono-nerd' 'ttf-twemoji' 'papirus-icon-theme' 'bibata-cursor-theme' 'brightnessctl' 'sound-theme-freedesktop' 'wireplumber' 'noctalia')
 source=('git+https://github.com/jens-buehnen/dotfiles.git')
 sha256sums=('SKIP')
 groups=('dotfiles')
