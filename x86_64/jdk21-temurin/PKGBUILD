@@ -1,6 +1,6 @@
 _majorver=21
-_completever=21.0.11
-_updatever=10
+_completever=21.0.12
+_updatever=8
 pkgrel=1
 pkgver=${_completever}.u${_updatever}
 _tag_ver=${_completever}+${_updatever}
