@@ -1,9 +1,9 @@
 pkgname=('nvim-dotfiles')
-pkgver=r16.f4bd474
+pkgver=r17.4e4676c
 pkgrel=1
 pkgdesc='my neovim configs'
 arch=('any')
-depends=('neovim' 'python-black' 'taplo-cli' 'jq' 'stylua' 'git' 'curl' 'rust-analyzer' 'tree-sitter-cli' 'pyright' 'lua-language-server' 'bash-language-server')
+depends=('neovim' 'python-black' 'taplo-cli' 'shfmt' 'jq' 'stylua' 'git' 'curl' 'rust-analyzer' 'tree-sitter-cli' 'pyright' 'lua-language-server' 'bash-language-server')
 source=('git+https://github.com/jens-buehnen/dotfiles.git')
 sha256sums=('SKIP')
 groups=('dotfiles')
