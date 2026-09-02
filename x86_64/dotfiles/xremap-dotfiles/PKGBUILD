@@ -1,5 +1,5 @@
 pkgname=('xremap-dotfiles')
-pkgver=r2.52bc94c
+pkgver=r3.1d8823a
 pkgrel=1
 pkgdesc='my xremap configs'
 arch=('any')
