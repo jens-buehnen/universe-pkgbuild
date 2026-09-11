@@ -1,5 +1,5 @@
 pkgname=('mango-dotfiles')
-pkgver=r45.c1b8328
+pkgver=r46.b59bc24
 pkgrel=1
 pkgdesc='my mango configs'
 arch=('any')
