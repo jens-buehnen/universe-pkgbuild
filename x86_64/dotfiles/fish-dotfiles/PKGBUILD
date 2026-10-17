@@ -1,9 +1,9 @@
 pkgname=('fish-dotfiles')
-pkgver=r30.287ea1f
+pkgver=r31.f24fea7
 pkgrel=1
 pkgdesc='my fish configs'
 arch=('any')
-depends=('fish' 'zoxide' 'eza' 'yay' 'eza' 'ripgrep' 'fd' 'doas')
+depends=('fish' 'zoxide' 'eza' 'yay' 'eza' 'ripgrep' 'fd' 'doas' 'moreutils')
 optdepends=('topgrade' 'git' 'ladybird' 'mpv' 'tar' 'hyfetch' 'unp')
 source=('git+https://github.com/jens-buehnen/dotfiles.git')
 sha256sums=('SKIP')
