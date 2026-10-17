@@ -1,0 +1,19 @@
+pkgname=('foot-dotfiles')
+pkgver=r1.c2ab97c
+pkgrel=1
+pkgdesc='my foot configs'
+arch=('any')
+depends=('foot' 'foot-terminfo' 'ttf-jetbrains-mono-nerd')
+source=('git+https://github.com/jens-buehnen/dotfiles.git')
+sha256sums=('SKIP')
+groups=('dotfiles')
+
+pkgver() {
+	cd dotfiles
+	printf "r%s.%s" "$(git rev-list --count HEAD -- foot)" "$(git log -1 --format="%h" -- foot)"
+}
+
+package() {
+	mkdir -p "${pkgdir}/usr/share/dotfiles"
+	cp -r "${srcdir}/dotfiles/foot" "${pkgdir}/usr/share/dotfiles"
+}
