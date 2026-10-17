@@ -1,5 +1,5 @@
 pkgname=('fish-dotfiles')
-pkgver=r31.f24fea7
+pkgver=r32.c61bcb8
 pkgrel=1
 pkgdesc='my fish configs'
 arch=('any')
