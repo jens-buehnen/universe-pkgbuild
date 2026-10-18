@@ -1,5 +1,5 @@
 pkgname=('wlr-which-key-dotfiles')
-pkgver=r19.a03ddcb
+pkgver=r20.cb1c3f2
 pkgrel=1
 pkgdesc='my wlr which key configs'
 arch=('any')
