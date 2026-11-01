@@ -1,7 +1,7 @@
 _majorver=27
 _completever=27.0.1.0.2
 _updatever=1
-pkgrel=1
+pkgrel=2
 pkgver=${_completever}.u${_updatever}
 _tag_ver=${_completever}+${_updatever}
 _versuffix=U
@@ -11,6 +11,7 @@ pkgdesc="Temurin (OpenJDK ${_majorver} Java binaries by Adoptium, formerly Adopt
 arch=('x86_64')
 url='https://adoptium.net/'
 license=('custom')
+groups=('jdk-temurin')
 
 depends=('java-runtime-common>=3' 'java-environment-common' 'ca-certificates-utils' 'desktop-file-utils' 'libxrender' 'libxtst' 'alsa-lib')
 optdepends=('gtk2: for the Gtk+ 2 look and feel'
