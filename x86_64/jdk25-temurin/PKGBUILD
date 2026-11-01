@@ -1,7 +1,7 @@
 _majorver=25
 _completever=25.0.5
 _updatever=8
-pkgrel=1
+pkgrel=2
 pkgver=${_completever}.u${_updatever}
 _tag_ver=${_completever}+${_updatever}
 _versuffix=U
@@ -44,8 +44,8 @@ package() {
 
   # Conf
   install -dm 755 "${pkgdir}/etc"
-  mv conf "${pkgdir}/etc/java-temurin"
-  ln -sf /etc/java-temurin conf
+  mv conf "${pkgdir}/etc/java-25-temurin"
+  ln -sf /etc/java-25-temurin conf
 
   # Legal
   install -dm 755 "${pkgdir}/usr/share/licenses"
