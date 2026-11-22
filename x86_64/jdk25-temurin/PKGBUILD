@@ -1,7 +1,7 @@
 _majorver=25
-_completever=25.0.5
-_updatever=8
-pkgrel=4
+_completever=25.0.5.1
+_updatever=2
+pkgrel=1
 pkgver=${_completever}.u${_updatever}
 _tag_ver=${_completever}+${_updatever}
 _versuffix=U
